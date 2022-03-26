@@ -72,4 +72,5 @@ public class CustomerController {
         log.info("api = /customer, method = DELETE, status = SUCCESS");
         return ResponseEntity.status(serviceResponse.getHttpStatus()).build();
     }
+
 }

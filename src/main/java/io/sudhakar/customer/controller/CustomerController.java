@@ -54,7 +54,7 @@ public class CustomerController {
     }
 
     @PutMapping("/{id}")
-    ResponseEntity<ServiceResponse<Void>> add(@RequestBody Customer customer,@PathVariable int id) {
+    ResponseEntity<ServiceResponse<Void>> update(@RequestBody Customer customer,@PathVariable int id) {
         log.info("api = /customer, method = POST, status = IN_PROCESS");
 
         ServiceResponse<Void> serviceResponse = customerService.update(id,customer);

@@ -97,14 +97,8 @@ public class ServiceImpl implements CustomerService {
             CustomerEntity customerEntity1 = customerEntity.get();
 
             BeanUtils.copyProperties(customer, customerEntity1);
-
-//            customerEntity.get().setId(customer.getId());
-//            customerEntity.get().setEmail(customer.getEmail());
-//            customerEntity.get().setName(customer.getName());
-//            customerEntity.get().setAddress(customer.getAddress());
-//            customerEntity.get().setPhone_no(customer.getPhone_no());
-
             customerRepository.save(customerEntity1);
+
             serviceResponse.setHttpStatus(HttpStatus.OK);
             log.info("method = update, status = SUCCESS");
         } catch (Exception e) {
